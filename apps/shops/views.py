@@ -18,13 +18,11 @@ class ShopsIndexView(View):
     def __init__(self):
         self.context = {"breadcrumbs" : []}
         self.generateBreadcrumbs();
-        print(self.context['breadcrumbs'])
+        self.context['title'] = 'Shops'
+        self.template = 'shop/shops.html'
 
     def get(self, request, *args, **kwargs):
-        
-        self.context['title'] = 'Shops'
-        template = 'shop/shops.html'
-        return render(request, template, self.context)
+        return render(request, self.template, self.context)
 
 
     def generateBreadcrumbs(self):
@@ -79,6 +77,7 @@ class LoadShopsDatatable(BaseDatatableView):
                 'id' : escape(item.id), 
                 'name' : escape(item.name),
                 'owner' : escape(item.owner),
+                'logo' : escape(item.logo.url),
                 'is_active' : escape(item.is_active),
                 'created_date' : item.created_date.strftime("%Y-%m-%d %H:%M:%S"),
                 'modified_date' : item.modified_date.strftime("%Y-%m-%d %H:%M:%S"),
@@ -97,7 +96,7 @@ class ShopsCreateOrUpdatetView(View):
         self.context = {'breadcrumbs': []}
         self.context['title'] = 'Shop'
         self.context['action_title'] = 'Create'
-        self.template = 'shop/add-edit-shop.html'
+        self.template = 'shop/create-or-update-shop.html'
         
         
     def get(self, request, *args, **kwargs):

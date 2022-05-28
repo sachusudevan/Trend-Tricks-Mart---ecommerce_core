@@ -51,8 +51,7 @@ LOCAL_APPS = [
     'apps.home',
     'apps.locations',
     'apps.accounts',
-    # 'apps.brands',
-    # 'apps.category',
+    'apps.groups',
     'apps.shops',
     
 ]

@@ -1,0 +1,493 @@
+{% extends 'layouts/app.html' %}
+{% load static %}
+
+
+{% block content %}
+
+	<!--begin::Content-->
+	<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+        <!--begin::Container-->
+        <div class="container-xxl" id="kt_content_container">
+            <!--begin::Form-->
+            <form id="ecommerce-shop-form" class="form d-flex flex-column flex-lg-row"  method="POST" enctype="multipart/form-data"  action="{% url 'shops:shops.create' %}">
+                {% csrf_token %}
+
+                <input type="hidden" name="shop_id" value="{{shop.id}}" />
+                <!--begin::Aside column-->
+                <div class="d-flex flex-column gap-7 gap-lg-10 w-100 w-lg-300px mb-7 me-lg-10">
+                    <!--begin::Logo settings-->
+                    <div class="card card-flush py-4">
+                        <!--begin::Card header-->
+                        <div class="card-header">
+                            <!--begin::Card title-->
+                            <div class="card-title">
+                                <h2>Logo</h2>
+                            </div>
+                            <!--end::Card title-->
+                        </div>
+                        <!--end::Card header-->
+                        <!--begin::Card body-->
+                        <div class="card-body text-center pt-0">
+                            <!--begin::Image input-->
+                            <div class="image-input image-input-empty image-input-outline mb-3" data-kt-image-input="true" {% if shop.logo is not None %} style="background-image: url({{ shop.logo.url }})" {% else %} style="background-image: url({% static 'assets/media/svg/files/blank-image.svg' %})" {% endif %}  >
+                                <!--begin::Preview existing shop_image-->
+                                <div class="image-input-wrapper w-150px h-150px"></div>
+                                <!--end::Preview existing shop_image-->
+                                <!--begin::Label-->
+                                <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change shop image">
+                                    <i class="bi bi-pencil-fill fs-7"></i>
+                                    <!--begin::Inputs-->
+                                    <input type="file" name="shop_image" accept=".png, .jpg, .jpeg" />
+                                    <input type="hidden" name="shop_image_remove" />
+                                    <!--end::Inputs-->
+                                </label>
+                                <!--end::Label-->
+                                <!--begin::Cancel-->
+                                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel shop image">
+                                    <i class="bi bi-x fs-2"></i>
+                                </span>
+                                <!--end::Cancel-->
+                                <!--begin::Remove-->
+                                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
+                                    <i class="bi bi-x fs-2"></i>
+                                </span>
+                                <!--end::Remove-->
+                            </div>
+                            <!--end::Image input-->
+                            <!--begin::Description-->
+                            <div class="text-muted fs-7">Set the shop logo. Only *.png, *.jpg and *.jpeg image files are accepted</div>
+                            <!--end::Description-->
+                        </div>
+                        <!--end::Card body-->
+                    </div>
+                    <!--end::Logo settings-->
+
+
+
+                    <!--begin::Cover Image settings-->
+                    <div class="card card-flush py-4">
+                        <!--begin::Card header-->
+                        <div class="card-header">
+                            <!--begin::Card title-->
+                            <div class="card-title">
+                                <h2>Cover Image</h2>
+                            </div>
+                            <!--end::Card title-->
+                        </div>
+                        <!--end::Card header-->
+                        <!--begin::Card body-->
+                        <div class="card-body text-center pt-0">
+                            <!--begin::Image input-->
+                            <div class="image-input image-input-empty image-input-outline mb-3" data-kt-image-input="true" {% if shop.cover_image is not None %} style="background-image: url({{ shop.cover_image.url }})" {% else %} style="background-image: url({% static 'assets/media/svg/files/blank-image.svg' %})" {% endif %} >
+                                <!--begin::Preview existing shop_cover_image-->
+                                <div class="image-input-wrapper w-150px h-150px"></div>
+                                <!--end::Preview existing shop_cover_image-->
+                                <!--begin::Label-->
+                                <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change Cover Image">
+                                    <i class="bi bi-pencil-fill fs-7"></i>
+                                    <!--begin::Inputs-->
+                                    <input type="file" name="shop_cover_image" accept=".png, .jpg, .jpeg" />
+                                    <input type="hidden" name="shop_cover_image_remove" />
+                                    <!--end::Inputs-->
+                                </label>
+                                <!--end::Label-->
+                                <!--begin::Cancel-->
+                                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel Cover Image">
+                                    <i class="bi bi-x fs-2"></i>
+                                </span>
+                                <!--end::Cancel-->
+                                <!--begin::Remove-->
+                                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
+                                    <i class="bi bi-x fs-2"></i>
+                                </span>
+                                <!--end::Remove-->
+                            </div>
+                            <!--end::Image input-->
+                            <!--begin::Description-->
+                            <div class="text-muted fs-7">Set the shop Cover Image. Only *.png, *.jpg and *.jpeg image files are accepted</div>
+                            <!--end::Description-->
+                        </div>
+                        <!--end::Card body-->
+                    </div>
+                    <!--end::Cover Image settings-->
+                    <!--begin::Status-->
+                    <div class="card card-flush py-4">
+                        <!--begin::Card header-->
+                        <div class="card-header">
+                            <!--begin::Card title-->
+                            <div class="card-title">
+                                <h2>Status</h2>
+                            </div>
+                            <!--end::Card title-->
+                            <!--begin::Card toolbar-->
+                            <div class="card-toolbar">
+                                <div class="rounded-circle {% if shop.is_active == 1 %} bg-success  {% else %} bg-danger  {% endif %}  w-15px h-15px" id="kt_ecommerce_add_product_status"></div>
+                            </div>
+                            <!--begin::Card toolbar-->
+                        </div>
+                        <!--end::Card header-->
+                        <!--begin::Card body-->
+                        <div class="card-body pt-0">
+                            <!--begin::Select2-->
+                            <select class="form-select mb-2" name="shop_status" data-control="select2" data-hide-search="true" data-placeholder="Select an option" id="kt_ecommerce_add_product_status_select">
+                                <option></option>
+                                <option value="1" {% if shop.is_active == 1 %} selected="selected" {% endif %}>Active</option>
+                                <option value="0" {% if shop.is_active == 0 %} selected="selected" {% endif %}>In Active</option>
+                            </select>
+                            <!--end::Select2-->
+                            <!--begin::Description-->
+                            <div class="text-muted fs-7">Set the shop status.</div>
+                            <!--end::Description-->
+                            
+                        </div>
+                        <!--end::Card body-->
+                    </div>
+                    <!--end::Status-->
+          
+                   
+                </div>
+                <!--end::Aside column-->
+                <!--begin::Main column-->
+                <div class="d-flex flex-column flex-row-fluid gap-7 gap-lg-10">
+                    <!--begin:::Tabs-->
+                    <ul class="nav nav-custom nav-tabs nav-line-tabs nav-line-tabs-2x border-0 fs-4 fw-bold mb-n2">
+                        <!--begin:::Tab item-->
+                        <li class="nav-item">
+                            <a class="nav-link text-active-primary pb-4 active" data-bs-toggle="tab" href="#kt_ecommerce_add_shop_general">General</a>
+                        </li>
+                        <!--end:::Tab item-->
+                        <!--begin:::Tab item-->
+                        <li class="nav-item">
+                            <a class="nav-link text-active-primary pb-4" data-bs-toggle="tab" href="#kt_ecommerce_add_shop_advanced">Advanced</a>
+                        </li>
+                        <!--end:::Tab item-->
+                    </ul>
+                    <!--end:::Tabs-->
+                    <!--begin::Tab content-->
+                    <div class="tab-content">
+                        <!--begin::Tab pane-->
+                        <div class="tab-pane fade show active" id="kt_ecommerce_add_shop_general" role="tab-panel">
+                            <div class="d-flex flex-column gap-7 gap-lg-10">
+                                <!--begin::General options-->
+                                <div class="card card-flush py-4">
+                                    <!--begin::Card header-->
+                                    <div class="card-header">
+                                        <div class="card-title">
+                                            <h2>General</h2>
+                                        </div>
+                                    </div>
+                                    <!--end::Card header-->
+                                    <!--begin::Card body-->
+                                    <div class="card-body pt-0">
+                                        <!--begin::Input group-->
+                                        <div class="mb-10 fv-row">
+                                            <!--begin::Label-->
+                                            <label class="required form-label">Shop Name</label>
+                                            <!--end::Label-->
+                                            <!--begin::Input-->
+                                            <input type="text" name="shop_name" value="{{shop.name}}" class="form-control mb-2" placeholder="Shop name" value="" />
+                                            <!--end::Input-->
+                                            <!--begin::Description-->
+                                            <div class="text-muted fs-7">A shop name is required</div>
+                                            <!--end::Description-->
+                                        </div>
+                                        <!--end::Input group-->
+                                        <!--begin::Input group-->
+                                        <div>
+                                            <!--begin::Label-->
+                                            <label class="form-label">Description</label>
+                                            <!--end::Label-->
+                                            <!--begin::Editor-->
+                                            <textarea hidden="true" id="shop_description" name="shop_description">{{shop.description}}</textarea>
+                                            <div id="kt_ecommerce_add_shop_description" name="shop_description" class="min-h-200px mb-2">
+                                                {{shop.description | safe}}
+                                            </div>
+                                            <!--end::Editor-->
+                                            <!--begin::Description-->
+                                            <div class="text-muted fs-7">Set a description to the shop for better visibility.</div>
+                                            <!--end::Description-->
+                                        </div>
+                                        <!--end::Input group-->
+                                    </div>
+                                    <!--end::Card header-->
+                                </div>
+                                <!--end::General options-->
+                                
+                                <!--begin::Shop Address-->
+                                <div class="card card-flush py-4">
+                                    <!--begin::Card header-->
+                                    <div class="card-header">
+                                        <div class="card-title">
+                                            <h2>Shop Address</h2>
+                                        </div>
+                                    </div>
+                                    <!--end::Card header-->
+                                    <!--begin::Card body-->
+                                    <div class="card-body pt-0">
+    
+
+                                        <div class="d-flex mb-10 flex-wrap gap-5">
+                                            <div class="fv-row w-100 flex-md-root">
+                                                <label class="required form-label">Country</label>
+                                                <select class="form-select mb-2" name="country" data-control="select2" data-hide-search="false" data-placeholder="Select an option">
+                                                    <option></option>
+                                                    {% for country in countries %}
+                                                        {% if shop.country_id ==  country.id %}
+                                                            <option value="{{country.id}}" selected>{{country.code}} - {{country.country_name}}</option>
+                                                        {% else %}
+                                                            <option value="{{country.id}}">{{country.code}} - {{country.country_name}}</option>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                    
+                                                </select>
+                                                <div class="text-muted fs-7">Set the country name.</div>
+                                            </div>
+                                            <div class="fv-row w-100 flex-md-root">
+                                                <label class="required form-label">State</label>
+                                                <select class="form-select mb-2" name="state" data-control="select2" data-hide-search="false" data-placeholder="Select an option">
+                                                    <option></option>
+                                                    {% for state in states %}
+                                                        {% if shop.state_id ==  state.id %}
+                                                            <option value="{{state.id}}" selected>{{state.state_code}} - {{state.state_name}}</option>
+                                                        {% else %}
+                                                            <option value="{{state.id}}">{{state.state_code}} - {{state.state_name}}</option>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                    
+                                                </select>
+                                                <div class="text-muted fs-7">Set the state name.</div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="d-flex mb-10 flex-wrap gap-5">
+                                            <div class="fv-row w-100 flex-md-root">
+                                                <label class="required form-label">City</label>
+                                                <input type="text" name="city" class="form-control mb-2" value="{{shop.city}}" placeholder="City" value="" />
+                                                <div class="text-muted fs-7">Set the city name.</div>
+                                            </div>
+                                            <div class="fv-row w-100 flex-md-root">
+                                                <label class="required form-label">ZIP</label>
+                                                <input type="text" name="zip_code" class="form-control mb-2" value="{{shop.zip_code}}" placeholder="ZIP" value="" />
+                                                <div class="text-muted fs-7">Set the ZIP code.</div>
+                                            </div>
+                                        </div>
+
+
+                                        <div>
+                                            <div class="fv-row w-100 flex-md-root">
+                                                <label class="required form-label">Street Address</label>
+                                                <textarea type="text" name="street_address" id="street_address" class="form-control mb-2" placeholder="Street  Address" value="" >{{shop.street_address}}</textarea>
+                                                <div class="text-muted fs-7">Set a Street Address to the shop for better visibility.</div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!--end::Card header-->
+                                </div>
+                                <!--end::Shop Address-->
+                            </div>
+                        </div>
+
+
+
+                        <div class="tab-pane fade" id="kt_ecommerce_add_shop_advanced" role="tab-panel">
+                            <div class="d-flex flex-column gap-7 gap-lg-10">
+                                <div class="card card-flush py-4">
+                                    <div class="card-header">
+                                        <div class="card-title">
+                                            <h2>Payment Info</h2>
+                                        </div>
+                                    </div>
+                                    <div class="card-body pt-0">
+                                        <div class="mb-5 fv-row">
+                                            <label class=" form-label">Account Holder Name</label>
+                                            <input type="text" name="account_holder_name" class="form-control mb-2" placeholder="Account Holder Name"  value="{{shop.account_holder_name}}"/>
+                                            {% comment %} <div class="text-muted fs-7">Enter account holder name.</div> {% endcomment %}
+                                        </div>
+                                        <div class="mb-5 fv-row">
+                                            <label class=" form-label">Account Holder Email</label>
+                                            <input type="text" name="account_holder_email" id="account_holder_email" class="form-control mb-2" placeholder="Account Holder Email" value="{{shop.account_holder_email}}" />
+                                            {% comment %} <div class="text-muted fs-7">Enter the account holder email.</div> {% endcomment %}
+                                        </div>
+                                        <div class="mb-5 fv-row">
+                                            <label class=" form-label">Bank Name</label>
+                                            <input type="text" name="bank_name" class="form-control mb-2" placeholder="Bank Name"  value="{{shop.bank_name}}" />
+                                            {% comment %} <div class="text-muted fs-7">Enter the bank name.</div> {% endcomment %}
+                                        </div>
+                                        <div class="mb-5 fv-row">
+                                            <label class=" form-label">Account Number</label>
+                                            <input type="text" id="account_number" name="account_number" class="form-control mb-2"  placeholder="Account Number" value="{{shop.account_number}}"  maxlength="16" />
+                                            {% comment %} <div class="text-muted fs-7">Enter the account number.</div> {% endcomment %}
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+
+
+                                <div class="card card-flush py-4">
+                                    <!--begin::Card header-->
+                                    <div class="card-header">
+                                        <div class="card-title">
+                                            <h2>Shop Settings</h2>
+                                        </div>
+                                    </div>
+                                    <!--end::Card header-->
+                                    <!--begin::Card body-->
+                                    <div class="card-body pt-0">
+
+                                        <div class="d-flex mb-5 flex-wrap gap-5">
+                                            <div class="fv-row w-100 flex-md-root">
+                                                <label class=" form-label">Latitude</label>
+                                                <input type="text" name="latitude" id="latitude" class="form-control mb-2" placeholder="Latitude" value="{{shop.latitude}}" />
+                                            </div>
+                                            <div class="fv-row w-100 flex-md-root">
+                                                <label class=" form-label">Longitude</label>
+                                                <input type="text" name="longitude" id="longitude" class="form-control mb-2" placeholder="Longitude" value="{{shop.longitude}}" />
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-5 fv-row">
+                                            <label class="form-label">Contact Number</label>
+                                            <input type="text" name="contact_number" id="contact_number" class="form-control mb-2" placeholder="Contact Number" value="{{shop.contact_number}}" />
+                                        </div>
+
+
+                                        <div class="mb-5 fv-row">
+                                            <label class="form-label">Website</label>
+                                            <input type="text" name="website" id="website" class="form-control mb-2" placeholder="Website" value="{{shop.website}}" />
+                                        </div>
+
+                                    </div>
+                                    <!--end::Card header-->
+                                </div>
+                                
+                                <!--end::Variations-->
+                                <!--begin::Shipping-->
+                               
+                                <!--begin::Meta options-->
+                                <div class="card card-flush py-4">
+                                    <!--begin::Card header-->
+                                    <div class="card-header">
+                                        <div class="card-title">
+                                            <h2>Meta Options</h2>
+                                        </div>
+                                    </div>
+                                    <!--end::Card header-->
+                                    <!--begin::Card body-->
+                                    <div class="card-body pt-0">
+                                        <!--begin::Input group-->
+                                        <div class="mb-10">
+                                            <!--begin::Label-->
+                                            <label class="form-label">Meta Tag Title</label>
+                                            <!--end::Label-->
+                                            <!--begin::Input-->
+                                            <input type="text" class="form-control mb-2" value="{{meta_data.meta_title}}" name="meta_title" placeholder="Meta tag name" />
+                                            <!--end::Input-->
+                                            <!--begin::Description-->
+                                            <div class="text-muted fs-7">Set a meta tag title. Recommended to be simple and precise keywords.</div>
+                                            <!--end::Description-->
+                                        </div>
+                                        <!--end::Input group-->
+                                        <!--begin::Input group-->
+                                        <div class="mb-10">
+                                            <!--begin::Label-->
+                                            <label class="form-label">Meta Tag Description</label>
+                                            <!--end::Label-->
+                                            <!--begin::Editor-->
+                                            <textarea hidden="true" id="shop_meta_description" name="shop_meta_description">{{meta_data.meta_description}}</textarea>
+                                            <div id="kt_ecommerce_add_shop_meta_description" name="kt_ecommerce_add_shop_meta_description" class="min-h-100px mb-2">
+                                                {{meta_data.meta_description | safe}}
+                                            </div>
+                                            <!--end::Editor-->
+                                            <!--begin::Description-->
+                                            <div class="text-muted fs-7">Set a meta tag description to the product for increased SEO ranking.</div>
+                                            <!--end::Description-->
+                                        </div>
+                                        <!--end::Input group-->
+                                        <!--begin::Input group-->
+                                        <div>
+                                            <!--begin::Label-->
+                                            <label class="form-label">Meta Tag Keywords</label>
+                                            <!--end::Label-->
+                                            <!--begin::Editor-->
+                                            <input id="meta_keywords" value="{{meta_data.meta_tag}}" name="meta_keywords" class="form-control mb-2" />
+                                            <!--end::Editor-->
+                                            <!--begin::Description-->
+                                            <div class="text-muted fs-7">Set a list of keywords that the product is related.</div>
+                                            <!--end::Description-->
+                                        </div>
+                                        <!--end::Input group-->
+                                    </div>
+                                    <!--end::Card header-->
+                                </div>
+                                <!--end::Meta options-->
+                            </div>
+                        </div>
+                        <!--end::Tab pane-->
+                    </div>
+                    <!--end::Tab content-->
+                    <div class="d-flex justify-content-end">
+                        <!--begin::Button-->
+                        <a href="{% url 'shops:shops.index' %}" id="kt_ecommerce_add_product_cancel" class="btn btn-light me-5">Cancel</a>
+                        <!--end::Button-->
+                        <!--begin::Button-->
+                        <button type="submit" id="ecommerce_add_shop_submit" class="btn btn-primary">
+                            <span class="indicator-label">Save </span>
+                            <span class="indicator-progress">Please wait... 
+                            <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                        </button>
+                        <!--end::Button-->
+                    </div>
+                </div>
+                <!--end::Main column-->
+            </form>
+            <!--end::Form-->
+        </div>
+        <!--end::Container-->
+    </div>
+	<!--end::Content-->
+	
+{% endblock content %}
+
+
+
+{% block script %}
+    <script src="{% static 'assets/js/modules/catalog/save-shop.js' %}?time={% now 'h:i:s' %}"></script>
+
+    <script>
+        $(document).ready(function(){
+            Inputmask({
+                mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
+                greedy: false,
+                onBeforePaste: function (pastedValue, opts) {
+                    pastedValue = pastedValue.toLowerCase();
+                    return pastedValue.replace("mailto:", "");
+                },
+                definitions: {
+                    "*": {
+                        validator: '[0-9A-Za-z!#$%&"*+/=?^_`{|}~\-]',
+                        cardinality: 1,
+                        casing: "lower"
+                    }
+                }
+            }).mask("#account_holder_email");
+            
+            new Tagify(document.querySelector("#meta_keywords"));
+            $('#account_number').maxlength({
+                warningClass: "badge badge-warning",
+                limitReachedClass: "badge badge-success"
+            });
+
+            Inputmask({
+                "mask" : "(999) 999-9999"
+            }).mask("#contact_number");
+
+
+              
+        });
+    </script>
+
+{% endblock script %}
