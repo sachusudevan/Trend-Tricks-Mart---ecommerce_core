@@ -1,0 +1,209 @@
+{% extends 'layouts/guest.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="d-flex flex-column flex-root">
+        <div class="d-flex flex-column flex-lg-row flex-column-fluid">
+            <div class="d-flex flex-column flex-lg-row-auto w-xl-600px positon-xl-relative" style="background-color: #F2C98A">
+                <div class="d-flex flex-column position-xl-fixed top-0 bottom-0 w-xl-600px scroll-y">
+                    <div class="d-flex flex-row-fluid flex-column text-center p-10 pt-lg-20">
+                        <a href="../demo3/index.html" class="py-9 mb-5">
+                            <img alt="Logo" src="{% static 'assets/media/logos/logo-2.svg' %}" class="h-60px"/>
+                        </a>
+                        <h1 class="fw-bolder fs-2qx pb-5 pb-md-10" style="color: #986923;">Welcome to Trend Tricks Mart</h1>
+                        <p class="fw-bold fs-2" style="color: #986923;">Discover Amazing Trend Tricks Mart
+                            <br/>with great ecommerce platform</p>
+                    </div>
+                    <div class="d-flex flex-row-auto bgi-no-repeat bgi-position-x-center bgi-size-contain bgi-position-y-bottom min-h-100px min-h-lg-350px" style="background-image: url({% static 'assets/media/illustrations/dozzy-1/13.png' %}"></div>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-lg-row-fluid py-10">
+                <div class="d-flex flex-center flex-column flex-column-fluid">
+                    <div class="w-lg-500px p-10 p-lg-15 mx-auto">
+                        <form class="form w-100" novalidate="novalidate" id="ttm_sign_in_form" data-kt-redirect-url="{% url 'home:dashboard' %}" action="#">
+                            <div class="text-center mb-10 pb-4">
+                                <h1 class="text-dark mb-3">Sign In to Trend Tricks Mart</h1>
+                                {% comment %}
+                                    <div class="text-gray-400 fw-bold fs-4">New Here?
+                                {% endcomment %}
+                                {% comment %}
+                                    <a href="../demo3/authentication/layouts/aside/sign-up.html" class="link-primary fw-bolder">Create an Account</a></div>
+                                {% endcomment %}
+                            </div>
+                            <div class="fv-row mb-10">
+                                <label class="form-label fs-6 fw-bolder text-dark">Email</label>
+                                <input class="form-control form-control-lg form-control-solid" type="text" id="login-email" name="email" autocomplete="off"/>
+                            </div>
+                            <div class="fv-row mb-10">
+                                <div class="d-flex flex-stack mb-2">
+                                    <label class="form-label fw-bolder text-dark fs-6 mb-0">Password</label>
+                                    {% comment %}
+                                        <a href="../demo3/authentication/layouts/aside/password-reset.html" class="link-primary fs-6 fw-bolder">Forgot Password ?</a>
+                                    {% endcomment %}
+                                </div>
+                                <input class="form-control form-control-lg form-control-solid" type="password" id="login-password" name="password" autocomplete="off"/>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" id="ttm_sign_in_submit" class="btn btn-lg btn-primary w-100 mb-5">
+                                    <span class="indicator-label">Continue</span>
+                                    <span class="indicator-progress">Please wait...
+                                        <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                                    </span>
+                                </button>
+                                <div class="text-center text-muted text-uppercase fw-bolder mb-5">or</div>
+                                <a href="#" class="btn btn-flex flex-center btn-light btn-lg w-100 mb-5">
+                                    <img alt="Logo" src="{% static 'assets/media/svg/brand-logos/google-icon.svg' %}" class="h-20px me-3"/>Continue with Google</a>
+
+                            </div>
+                            <!--end::Actions-->
+                        </form>
+                        <!--end::Form-->
+                    </div>
+                    <!--end::Wrapper-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+
+{% block script %}
+
+    <script>
+        "use strict";
+        var KTSigninGeneral = function () { // Elements
+            var form;
+            var submitButton;
+            var validator;
+
+            // Handle form
+            var handleForm = function (e) {
+                validator = FormValidation.formValidation(form, {
+                    fields: {
+                        'email': {
+                            validators: {
+                                notEmpty: {
+                                    message: 'Email address is required'
+                                },
+                                emailAddress: {
+                                    message: 'The value is not a valid email address'
+                                }
+                            }
+                        },
+                        'password': {
+                            validators: {
+                                notEmpty: {
+                                    message: 'The password is required'
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        trigger: new FormValidation.plugins.Trigger(),
+                        bootstrap: new FormValidation.plugins.Bootstrap5(
+                            {rowSelector: '.fv-row'}
+                        )
+                    }
+                });
+
+                // Handle form submit
+                submitButton.addEventListener('click', function (e) { // Prevent button default action
+                    e.preventDefault();
+
+                    // Validate form
+                    validator.validate().then(function (status) {
+                        if (status == 'Valid') { // Show loading indication
+                            submitButton.setAttribute('data-kt-indicator', 'on');
+
+                            // Disable button to avoid multiple click
+                            submitButton.disabled = true;
+
+
+                            // Simulate ajax request
+                            setTimeout(function () { // Hide loading indication
+                                submitButton.removeAttribute('data-kt-indicator');
+
+                                // Enable button
+                                submitButton.disabled = false;
+                                let email = $('#login-email').val();
+                                let password = $('#login-password').val();;
+                                $.post("{% url 'authentication:login' %}", {
+                                    email: email,
+                                    password: password
+                                }, function (data, status, xhr) {
+
+                                    if (data.status_code == 100) {
+                                        Swal.fire({
+                                            text: data.message,
+                                            icon: "success",
+                                            buttonsStyling: false,
+                                            confirmButtonText: "Ok, got it!",
+                                            customClass: {
+                                                confirmButton: "btn btn-primary"
+                                            }
+                                        }).then(function (result) {
+
+                                            if (result.isConfirmed) {
+                                                form.querySelector('[name="email"]').value = "";
+                                                form.querySelector('[name="password"]').value = "";
+
+                                                var redirectUrl = form.getAttribute('data-kt-redirect-url');
+                                                if (redirectUrl) {
+                                                    location.href = redirectUrl;
+                                                }
+                                            }
+                                        });
+                                    } else {
+                                        Swal.fire({
+                                            text: data.message,
+                                            icon: "error",
+                                            buttonsStyling: false,
+                                            confirmButtonText: "Ok, got it!",
+                                            customClass: {
+                                                confirmButton: "btn btn-primary"
+                                            }
+                                        });
+                                    }
+
+                                }, 'json').done(function () {
+                                    console.log('Request done!');
+                                }).fail(function (jqxhr, settings, ex) {
+                                    console.log('failed, ' + ex);
+                                });
+
+
+                            }, 2000);
+                        } else {
+                            Swal.fire({
+                                text: "Sorry, looks like there are some errors detected, please try again.",
+                                icon: "error",
+                                buttonsStyling: false,
+                                confirmButtonText: "Ok, got it!",
+                                customClass: {
+                                    confirmButton: "btn btn-primary"
+                                }
+                            });
+                        }
+                    });
+                });
+            }
+
+            // Public functions
+            return { // Initialization
+                init: function () {
+                    form = document.querySelector('#ttm_sign_in_form');
+                    submitButton = document.querySelector('#ttm_sign_in_submit');
+
+                    handleForm();
+                }
+            };
+        }();
+
+        KTUtil.onDOMContentLoaded(function () {
+            KTSigninGeneral.init();
+        });
+    </script>
+
+{% endblock script %}

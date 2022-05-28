@@ -1,0 +1,3 @@
+python.exe .\manage.py locations_db_populate
+
+python.exe .\manage.py populate_shops

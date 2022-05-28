@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html
+    lang="en">
+    <!--begin::Head-->
+    <head>
+        <title>Trend Tricks Mart</title>
+        <meta charset="utf-8"/>
+        <meta name="description" content=""/>
+        <meta name="keywords" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta property="og:locale" content="en_US"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Trend Tricks Mart"/>
+
+        <link rel="shortcut icon" href="{% static 'assets/media/logos/favicon.ico' %}"/>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"/>
+
+        <link href="{% static 'assets/plugins/global/plugins.bundle.css' %}?time={% now 'h:i:s' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'assets/css/style.bundle.css' %}?time={% now 'h:i:s' %}" rel="stylesheet" type="text/css"/>
+
+
+    </head>
+    <body id="kt_body" class="bg-body">
+
+        {% block content %}{% endblock content %}
+        
+        <script src="{% static 'assets/plugins/global/plugins.bundle.js' %}?time={% now 'h:i:s' %}"></script>
+        <script src="{% static 'assets/js/scripts.bundle.js' %}?time={% now 'h:i:s' %}"></script>
+
+        <script>
+            $.ajaxSetup({
+                data: {
+                    'csrfmiddlewaretoken': '{{ csrf_token }}'
+                }
+            });
+        </script>
+        {% block script %}{% endblock script %}
+    </body>
+    <!--end::Body-->
+</html>
