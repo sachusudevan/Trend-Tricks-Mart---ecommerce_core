@@ -1,3 +1,4 @@
+import logging
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.urls import reverse
@@ -12,6 +13,11 @@ from django.shortcuts import get_list_or_404, get_object_or_404, redirect, rende
 from django.views import View
 from django.utils.decorators import method_decorator
 from django.contrib import messages
+
+
+
+logger = logging.getLogger(__name__)
+
 
 
 @method_decorator(login_required, name='dispatch')

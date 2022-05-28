@@ -1,3 +1,4 @@
+import logging
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 from django.views import View
@@ -7,6 +8,8 @@ from apps.users.models import Users
 from django.contrib import messages
 
 # Create your views here.
+
+logger = logging.getLogger(__name__)
 
 
 

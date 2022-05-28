@@ -1,3 +1,4 @@
+import logging
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse
 from django.urls import reverse
@@ -11,6 +12,8 @@ from django.utils.decorators import method_decorator
 from django.contrib import messages
 from apps.locations.models import Country, State
 from django.core import serializers
+
+logger = logging.getLogger(__name__)
 
 
 @method_decorator(login_required, name='dispatch')
