@@ -1,6 +1,6 @@
 import logging
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.urls import reverse
 from django_datatables_view.base_datatable_view import BaseDatatableView
 from django.utils.html import escape
@@ -81,9 +81,11 @@ class LoadShopsDatatable(BaseDatatableView):
                 'name' : escape(item.name),
                 'owner' : escape(item.owner),
                 'logo' : escape(item.logo.url),
+                'profile' : escape(reverse('shops:shops.shop.index', args=(item.slug,))),
                 'is_active' : escape(item.is_active),
                 'created_date' : item.created_date.strftime("%Y-%m-%d %H:%M:%S"),
                 'modified_date' : item.modified_date.strftime("%Y-%m-%d %H:%M:%S"),
+                
             })
         return json_data
 
@@ -237,3 +239,24 @@ class DestroyStaffRecordsView(View):
 
 
 
+
+
+@method_decorator(login_required, name='dispatch')
+class ShopDashboardIndexView(View):
+    def __init__(self,**kwargs):
+        super().__init__(**kwargs)
+        self.context = {"breadcrumbs" : [], 'shop_slug': ''}
+        self.generateBreadcrumbs();
+        self.context['title'] = 'Shops'
+        self.template = 'shop/dashboard/dashboard.html'
+        
+    def get(self, request, *args, **kwargs):
+        self.context['shop_slug'] = kwargs.pop('shop_slug', None) 
+        self.context['shop'] = get_object_or_404(Shops, slug=self.context['shop_slug'])
+
+        return render(request, self.template, self.context)
+
+    def generateBreadcrumbs(self):
+        self.context['breadcrumbs'].append({"name" : "Home", "route" : reverse('home:dashboard'),'active' : False});
+        self.context['breadcrumbs'].append({"name" : "Shops", "route" : reverse('shops:shops.index') ,'active' : False});
+        self.context['breadcrumbs'].append({"name" : "Profile", "route" : '','active' : True});

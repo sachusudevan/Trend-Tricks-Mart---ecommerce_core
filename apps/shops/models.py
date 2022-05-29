@@ -9,13 +9,13 @@ def shops_cover_image(self,filename):
     return f"shops/cover/{self.name}-{random()}.png"
 
 def shops_cover_default_image():
-    return f"default/blank-image.svg"
+    return f"default/default-shop-image.jpg"
 
 def shops_logo_image(self,filename):
     return f"shops/logo/{self.name}-{random()}.png"
 
 def shops_logo_default_image():
-    return f"default/blank-image.svg"
+    return f"default/default-shop-logo.png"
 
 
 
@@ -44,6 +44,7 @@ class Shops(models.Model):
     website = models.CharField(_('Website'),max_length=255,null=True, blank=True)
 
     is_active = models.BooleanField(_('Is Active'),default=0)
+    is_verified  = models.BooleanField(default = False)
     
     created_date = models.DateTimeField(_('Created Date'), auto_now_add=True, editable=False)
     modified_date = models.DateTimeField(_('Modified Date'), auto_now=True, editable=False)

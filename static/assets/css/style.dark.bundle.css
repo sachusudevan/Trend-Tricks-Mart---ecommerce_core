@@ -30,6 +30,7 @@
   --bs-warning: #FFA800;
   --bs-danger: #F64E60;
   --bs-dark: #FFFFFF;
+  --bs-custom-black: #1E1E2D;
   --bs-white-rgb: 255, 255, 255;
   --bs-light-rgb: 50, 50, 72;
   --bs-primary-rgb: 54, 153, 255;
@@ -30727,7 +30728,7 @@ textarea.form-control-lg {
 }
 
 .bg-white {
-  background-color: #ffffff !important;
+  background-color: #1E1E2D !important;
   --bg-color: 255, 255, 255 !important;
 }
 .bg-white.hoverable:hover {

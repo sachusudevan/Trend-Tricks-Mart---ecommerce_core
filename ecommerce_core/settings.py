@@ -59,7 +59,7 @@ LOCAL_APPS = [
 
 # additional plugin apps
 THIRD_PARTY_APPS = [
-
+    'multiselectfield',
 ]
 
 
@@ -89,7 +89,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-
                 'apps.home.breadcrumb_processor.generateBreadcrumbs',
                 'apps.accounts.context_processors.theme',
             ],

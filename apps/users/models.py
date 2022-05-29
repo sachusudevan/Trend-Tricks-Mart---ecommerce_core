@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 import random
 from django.utils.translation import gettext as _
-
+from multiselectfield import MultiSelectField
 
 def users_image(self, filename):
     return f"users/{self.username}-{self.email}.png"
@@ -106,4 +106,40 @@ class UserPermissions(Users):
     class Meta:
         proxy = True
         permissions = [('Can customer user permissions', 'access_customerpermissions')]
+
+
+
+
+
+class UserRole(models.Model):
+    CUSTOMER_TYPE_CHOICES = (
+        (1, 'Dealer'),
+        (2, 'Retailer'),
+        (3, 'Sub-Dealer'),
+    )
+    
+    user = models.ForeignKey(Users, on_delete=models.CASCADE)
+    # cutomer_type = models.IntegerField(_('Cutomer Type'), max_length = 1, choices = CUSTOMER_TYPE_CHOICES, blank = True, null = True)
+    cutomer_type = MultiSelectField(choices=CUSTOMER_TYPE_CHOICES, max_choices=3, max_length=3)
+    created_date = models.DateTimeField(_('Created Date'), auto_now_add=True, editable=False)
+    modified_date = models.DateTimeField(_('Modified Date'), auto_now=True, editable=False)
+    
+
+
+
+    def __int__(self):
+        return self.cutomer_type
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -1,0 +1,321 @@
+{% load static %}
+<div id="kt_aside" class="aside py-9" data-kt-drawer="true" data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_toggle">
+    <div class="aside-logo flex-column-auto px-9 mb-9" id="kt_aside_logo">
+        <!--begin::Logo-->
+        <a href="">
+            {% if theme.theme %}
+                <img alt="Logo" src="{% static 'assets/media/logos/logo-demo3-dark.svg' %}" class="h-20px logo" />
+            {% else %}
+                <img alt="Logo" src="{% static 'assets/media/logos/logo-demo3-default.svg' %}" class="h-20px logo" />
+            {% endif %}
+            
+        </a>
+        <!--end::Logo-->
+    </div>
+    <div class="aside-menu flex-column-fluid ps-5 pe-3 mb-9" id="kt_aside_menu">
+        <div class="w-100 hover-scroll-overlay-y d-flex pe-2" id="kt_aside_menu_wrapper" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_aside_logo, #kt_aside_footer" data-kt-scroll-wrappers="#kt_aside, #kt_aside_menu, #kt_aside_menu_wrapper" data-kt-scroll-offset="100">
+            <!--begin::Menu-->
+            <div class="menu menu-column menu-rounded fw-bold my-auto" id="#kt_aside_menu" data-kt-menu="true">
+                <div class="menu-item">
+                    <a class="menu-link {% if request.resolver_match.url_name == "shops.shop.index" %} active {% endif %}" href="{% url 'shops:shops.shop.index' shop_slug=shop_slug %}">
+                        <span class="menu-icon">
+                            <span class="svg-icon svg-icon-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 576 512" fill="none">
+                                    <path fill="currentColor"  d="M575.8 255.5C575.8 273.5 560.8 287.6 543.8 287.6H511.8L512.5 447.7C512.5 450.5 512.3 453.1 512 455.8V472C512 494.1 494.1 512 472 512H456C454.9 512 453.8 511.1 452.7 511.9C451.3 511.1 449.9 512 448.5 512H392C369.9 512 352 494.1 352 472V384C352 366.3 337.7 352 320 352H256C238.3 352 224 366.3 224 384V472C224 494.1 206.1 512 184 512H128.1C126.6 512 125.1 511.9 123.6 511.8C122.4 511.9 121.2 512 120 512H104C81.91 512 64 494.1 64 472V360C64 359.1 64.03 358.1 64.09 357.2V287.6H32.05C14.02 287.6 0 273.5 0 255.5C0 246.5 3.004 238.5 10.01 231.5L266.4 8.016C273.4 1.002 281.4 0 288.4 0C295.4 0 303.4 2.004 309.5 7.014L564.8 231.5C572.8 238.5 576.9 246.5 575.8 255.5L575.8 255.5z"/>
+                                    <path opacity="0.3" d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z" fill="currentColor" />
+                                </svg>
+                            </span>
+                        </span>
+                        <span class="menu-title">Dashboard</span>
+                    </a>
+                </div>
+
+
+                <div class="menu-item">
+                    <a class="menu-link {% if request.resolver_match.url_name in 'shops.shop.product.index,shops.create,shops.update' %} active {% endif %}" href="{% url 'shops:shops.shop.product.index' shop_slug=shop_slug  %}">
+                        <span class="menu-icon">
+                            <span class="svg-icon svg-icon-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512" fill="none">
+                                    <path fill="currentColor" d="M50.73 58.53C58.86 42.27 75.48 32 93.67 32H208V160H0L50.73 58.53zM240 160V32H354.3C372.5 32 389.1 42.27 397.3 58.53L448 160H240zM448 416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V192H448V416z"/>
+                                    <path opacity="0.3" d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z" fill="currentColor" />
+                                </svg>
+                            </span>
+                        </span>
+                        <span class="menu-title">Products </span>
+                    </a>
+                </div>
+
+
+                <div class="menu-item">
+                    <a class="menu-link {% if request.resolver_match.url_name == "my-shops" %}active{% endif %}" href="{% url 'home:dashboard' %}">
+                        <span class="menu-icon">
+                            <span class="svg-icon svg-icon-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z" fill="currentColor" />
+                                    <path opacity="0.3" d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z" fill="currentColor" />
+                                </svg>
+                            </span>
+                        </span>
+                        <span class="menu-title">My Shops</span>
+                    </a>
+                </div>
+                
+
+
+                <div class="menu-item">
+                    <a class="menu-link {% if request.resolver_match.url_name in 'groups.index,groups.create,groups.update' %} active {% endif %}" href="{% url 'groups:groups.index' %}">
+                        <span class="menu-icon">
+                            <span class="svg-icon svg-icon-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 576 512">
+                                    <path fill="currentColor" d="M172.1 40.16L268.1 3.76C280.9-1.089 295.1-1.089 307.9 3.76L403.9 40.16C425.6 48.41 440 69.25 440 92.52V204.7C441.3 205.1 442.6 205.5 443.9 205.1L539.9 242.4C561.6 250.6 576 271.5 576 294.7V413.9C576 436.1 562.9 456.2 542.5 465.1L446.5 507.3C432.2 513.7 415.8 513.7 401.5 507.3L288 457.5L174.5 507.3C160.2 513.7 143.8 513.7 129.5 507.3L33.46 465.1C13.13 456.2 0 436.1 0 413.9V294.7C0 271.5 14.39 250.6 36.15 242.4L132.1 205.1C133.4 205.5 134.7 205.1 136 204.7V92.52C136 69.25 150.4 48.41 172.1 40.16V40.16zM290.8 48.64C289 47.95 286.1 47.95 285.2 48.64L206.8 78.35L287.1 109.5L369.2 78.35L290.8 48.64zM392 210.6V121L309.6 152.6V241.8L392 210.6zM154.8 250.9C153 250.2 150.1 250.2 149.2 250.9L70.81 280.6L152 311.7L233.2 280.6L154.8 250.9zM173.6 455.3L256 419.1V323.2L173.6 354.8V455.3zM342.8 280.6L424 311.7L505.2 280.6L426.8 250.9C425 250.2 422.1 250.2 421.2 250.9L342.8 280.6zM528 413.9V323.2L445.6 354.8V455.3L523.2 421.2C526.1 419.9 528 417.1 528 413.9V413.9z"/>
+                                    <path opacity="0.3" d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z" fill="currentColor" />
+                                </svg> 
+                                
+                            </span>
+                        </span>
+                        <span class="menu-title">Groups </span>
+                    </a>
+                </div>
+
+
+
+
+                <div class="menu-item">
+                    <a class="menu-link {% if request.resolver_match.url_name in 'category.index,category.create,category.update' %} active {% endif %}" href="{% url 'categories:category.index' %}">
+                        <span class="menu-icon">
+                            <span class="svg-icon svg-icon-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512">
+                                    <path fill="currentColor" d="M427.84 380.67l-196.5 97.82a18.6 18.6 0 0 1-14.67 0L20.16 380.67c-4-2-4-5.28 0-7.29L67.22 350a18.65 18.65 0 0 1 14.69 0l134.76 67a18.51 18.51 0 0 0 14.67 0l134.76-67a18.62 18.62 0 0 1 14.68 0l47.06 23.43c4.05 1.96 4.05 5.24 0 7.24zm0-136.53l-47.06-23.43a18.62 18.62 0 0 0-14.68 0l-134.76 67.08a18.68 18.68 0 0 1-14.67 0L81.91 220.71a18.65 18.65 0 0 0-14.69 0l-47.06 23.43c-4 2-4 5.29 0 7.31l196.51 97.8a18.6 18.6 0 0 0 14.67 0l196.5-97.8c4.05-2.02 4.05-5.3 0-7.31zM20.16 130.42l196.5 90.29a20.08 20.08 0 0 0 14.67 0l196.51-90.29c4-1.86 4-4.89 0-6.74L231.33 33.4a19.88 19.88 0 0 0-14.67 0l-196.5 90.28c-4.05 1.85-4.05 4.88 0 6.74z" class="a"/>
+                                    <path opacity="0.3" d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z" fill="currentColor" />
+                                </svg>
+                            </span>
+                        </span>
+                        <span class="menu-title">Categories </span>
+                    </a>
+                </div>
+       
+                
+            </div>
+            <!--end::Menu-->
+        </div>
+    </div>
+
+
+
+
+    <!--begin::Footer-->
+    <div class="aside-footer flex-column-auto px-9" id="kt_aside_footer">
+        <!--begin::User panel-->
+        <div class="d-flex flex-stack">
+            <!--begin::Wrapper-->
+            <div class="d-flex align-items-center">
+                <!--begin::Avatar-->
+                <div class="symbol symbol-circle symbol-40px">
+                    <img src="{{  user.image.url  }}" alt="photo" />
+                </div>
+                <!--end::Avatar-->
+                <!--begin::User info-->
+                <div class="ms-2">
+                    <!--begin::Name-->
+                    <a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bolder lh-1">{{ user.username }}</a>
+                    <!--end::Name-->
+                    <!--begin::Major-->
+                    <span class="text-muted fw-bold d-block fs-7 lh-1">Admin</span>
+                    <!--end::Major-->
+                </div>
+                <!--end::User info-->
+            </div>
+            <!--end::Wrapper-->
+            <!--begin::User menu-->
+            <div class="ms-1">
+                <div class="btn btn-sm btn-icon btn-active-color-primary position-relative me-n2" data-kt-menu-trigger="click" data-kt-menu-overflow="true" data-kt-menu-placement="top-end">
+                    <!--begin::Svg Icon | path: icons/duotune/coding/cod001.svg-->
+                    <span class="svg-icon svg-icon-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path opacity="0.3" d="M22.1 11.5V12.6C22.1 13.2 21.7 13.6 21.2 13.7L19.9 13.9C19.7 14.7 19.4 15.5 18.9 16.2L19.7 17.2999C20 17.6999 20 18.3999 19.6 18.7999L18.8 19.6C18.4 20 17.8 20 17.3 19.7L16.2 18.9C15.5 19.3 14.7 19.7 13.9 19.9L13.7 21.2C13.6 21.7 13.1 22.1 12.6 22.1H11.5C10.9 22.1 10.5 21.7 10.4 21.2L10.2 19.9C9.4 19.7 8.6 19.4 7.9 18.9L6.8 19.7C6.4 20 5.7 20 5.3 19.6L4.5 18.7999C4.1 18.3999 4.1 17.7999 4.4 17.2999L5.2 16.2C4.8 15.5 4.4 14.7 4.2 13.9L2.9 13.7C2.4 13.6 2 13.1 2 12.6V11.5C2 10.9 2.4 10.5 2.9 10.4L4.2 10.2C4.4 9.39995 4.7 8.60002 5.2 7.90002L4.4 6.79993C4.1 6.39993 4.1 5.69993 4.5 5.29993L5.3 4.5C5.7 4.1 6.3 4.10002 6.8 4.40002L7.9 5.19995C8.6 4.79995 9.4 4.39995 10.2 4.19995L10.4 2.90002C10.5 2.40002 11 2 11.5 2H12.6C13.2 2 13.6 2.40002 13.7 2.90002L13.9 4.19995C14.7 4.39995 15.5 4.69995 16.2 5.19995L17.3 4.40002C17.7 4.10002 18.4 4.1 18.8 4.5L19.6 5.29993C20 5.69993 20 6.29993 19.7 6.79993L18.9 7.90002C19.3 8.60002 19.7 9.39995 19.9 10.2L21.2 10.4C21.7 10.5 22.1 11 22.1 11.5ZM12.1 8.59998C10.2 8.59998 8.6 10.2 8.6 12.1C8.6 14 10.2 15.6 12.1 15.6C14 15.6 15.6 14 15.6 12.1C15.6 10.2 14 8.59998 12.1 8.59998Z" fill="currentColor" />
+                            <path d="M17.1 12.1C17.1 14.9 14.9 17.1 12.1 17.1C9.30001 17.1 7.10001 14.9 7.10001 12.1C7.10001 9.29998 9.30001 7.09998 12.1 7.09998C14.9 7.09998 17.1 9.29998 17.1 12.1ZM12.1 10.1C11 10.1 10.1 11 10.1 12.1C10.1 13.2 11 14.1 12.1 14.1C13.2 14.1 14.1 13.2 14.1 12.1C14.1 11 13.2 10.1 12.1 10.1Z" fill="currentColor" />
+                        </svg>
+                    </span>
+                    <!--end::Svg Icon-->
+                </div>
+                <!--begin::User account menu-->
+                <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-primary fw-bold py-4 fs-6 w-275px" data-kt-menu="true">
+                    <!--begin::Menu item-->
+                    <div class="menu-item px-3">
+                        <div class="menu-content d-flex align-items-center px-3">
+                            <!--begin::Avatar-->
+                            <div class="symbol symbol-50px me-5">
+                                <img alt="Logo" src="{% static 'assets/media/avatars/300-1.jpg' %}" />
+                            </div>
+                            <!--end::Avatar-->
+                            <!--begin::Username-->
+                            <div class="d-flex flex-column">
+                                <div class="fw-bolder d-flex align-items-center fs-5">Max Smith 
+                                <span class="badge badge-light-success fw-bolder fs-8 px-2 py-1 ms-2">Pro</span></div>
+                                <a href="#" class="fw-bold text-muted text-hover-primary fs-7">max@kt.com</a>
+                            </div>
+                            <!--end::Username-->
+                        </div>
+                    </div>
+                    <!--end::Menu item-->
+                    <!--begin::Menu separator-->
+                    <div class="separator my-2"></div>
+                    <!--end::Menu separator-->
+                    <!--begin::Menu item-->
+                    <div class="menu-item px-5">
+                        <a href="account/overview.html" class="menu-link px-5">My Profile</a>
+                    </div>
+                    <!--end::Menu item-->
+                    <!--begin::Menu item-->
+                    <div class="menu-item px-5">
+                        <a href="apps/projects/list.html" class="menu-link px-5">
+                            <span class="menu-text">My Projects</span>
+                            <span class="menu-badge">
+                                <span class="badge badge-light-danger badge-circle fw-bolder fs-7">3</span>
+                            </span>
+                        </a>
+                    </div>
+                    <!--end::Menu item-->
+                    <!--begin::Menu item-->
+                    <div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="right-end">
+                        <a href="#" class="menu-link px-5">
+                            <span class="menu-title">My Subscription</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <!--begin::Menu sub-->
+                        <div class="menu-sub menu-sub-dropdown w-175px py-4">
+                            <!--begin::Menu item-->
+                            <div class="menu-item px-3">
+                                <a href="account/referrals.html" class="menu-link px-5">Referrals</a>
+                            </div>
+                            <!--end::Menu item-->
+                            <!--begin::Menu item-->
+                            <div class="menu-item px-3">
+                                <a href="account/billing.html" class="menu-link px-5">Billing</a>
+                            </div>
+                            <!--end::Menu item-->
+                            <!--begin::Menu item-->
+                            <div class="menu-item px-3">
+                                <a href="account/statements.html" class="menu-link px-5">Payments</a>
+                            </div>
+                            <!--end::Menu item-->
+                            <!--begin::Menu item-->
+                            <div class="menu-item px-3">
+                                <a href="account/statements.html" class="menu-link d-flex flex-stack px-5">Statements 
+                                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="View your statements"></i></a>
+                            </div>
+                            <!--end::Menu item-->
+                            <!--begin::Menu separator-->
+                            <div class="separator my-2"></div>
+                            <!--end::Menu separator-->
+                            <!--begin::Menu item-->
+                            <div class="menu-item px-3">
+                                <div class="menu-content px-3">
+                                    <label class="form-check form-switch form-check-custom form-check-solid">
+                                        <input class="form-check-input w-30px h-20px" type="checkbox" value="1" checked="checked" name="notifications" />
+                                        <span class="form-check-label text-muted fs-7">Notifications</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <!--end::Menu item-->
+                        </div>
+                        <!--end::Menu sub-->
+                    </div>
+                    <!--end::Menu item-->
+                    <!--begin::Menu item-->
+                    <div class="menu-item px-5">
+                        <a href="account/statements.html" class="menu-link px-5">My Statements</a>
+                    </div>
+                    <!--end::Menu item-->
+                    <!--begin::Menu separator-->
+                    <div class="separator my-2"></div>
+                    <!--end::Menu separator-->
+                    <!--begin::Menu item-->
+                    <div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="right-end">
+                        <a href="#" class="menu-link px-5">
+                            <span class="menu-title position-relative">Language 
+                            <span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">English 
+                            <img class="w-15px h-15px rounded-1 ms-2" src="{% static 'assets/media/flags/united-states.svg' %}" alt="" /></span></span>
+                        </a>
+                        <!--begin::Menu sub-->
+                        <div class="menu-sub menu-sub-dropdown w-175px py-4">
+                            <!--begin::Menu item-->
+                            <div class="menu-item px-3">
+                                <a href="account/settings.html" class="menu-link d-flex px-5 active">
+                                <span class="symbol symbol-20px me-4">
+                                    <img class="rounded-1" src="{% static 'assets/media/flags/united-states.svg' %}" alt="" />
+                                </span>English</a>
+                            </div>
+                            <!--end::Menu item-->
+                            <!--begin::Menu item-->
+                            <div class="menu-item px-3">
+                                <a href="account/settings.html" class="menu-link d-flex px-5">
+                                <span class="symbol symbol-20px me-4">
+                                    <img class="rounded-1" src="{% static 'assets/media/flags/spain.svg' %}" alt="" />
+                                </span>Spanish</a>
+                            </div>
+                            <!--end::Menu item-->
+                            <!--begin::Menu item-->
+                            <div class="menu-item px-3">
+                                <a href="account/settings.html" class="menu-link d-flex px-5">
+                                <span class="symbol symbol-20px me-4">
+                                    <img class="rounded-1" src="{% static 'assets/media/flags/germany.svg' %}" alt="" />
+                                </span>German</a>
+                            </div>
+                            <!--end::Menu item-->
+                            <!--begin::Menu item-->
+                            <div class="menu-item px-3">
+                                <a href="account/settings.html" class="menu-link d-flex px-5">
+                                <span class="symbol symbol-20px me-4">
+                                    <img class="rounded-1" src="{% static 'assets/media/flags/japan.svg' %}" alt="" />
+                                </span>Japanese</a>
+                            </div>
+                            <!--end::Menu item-->
+                            <!--begin::Menu item-->
+                            <div class="menu-item px-3">
+                                <a href="account/settings.html" class="menu-link d-flex px-5">
+                                <span class="symbol symbol-20px me-4">
+                                    <img class="rounded-1" src="{% static 'assets/media/flags/france.svg' %}" alt="" />
+                                </span>French</a>
+                            </div>
+                            <!--end::Menu item-->
+                        </div>
+                        <!--end::Menu sub-->
+                    </div>
+                    <!--end::Menu item-->
+                    <!--begin::Menu item-->
+                    <div class="menu-item px-5 my-1">
+                        <a href="account/settings.html" class="menu-link px-5">Account Settings</a>
+                    </div>
+                    <!--end::Menu item-->
+                    <!--begin::Menu item-->
+                    <div class="menu-item px-5">
+                        <a href="{% url 'authentication:signout' %}" class="menu-link px-5">Sign Out</a>
+                    </div>
+                    <!--end::Menu item-->
+                    <!--begin::Menu separator-->
+                    <div class="separator my-2"></div>
+                    <!--end::Menu separator-->
+                    <!--begin::Menu item-->
+                    <div class="menu-item px-5">
+                        <div class="menu-content px-5">
+                            <label class="form-check form-switch form-check-custom form-check-solid pulse pulse-success" for="kt_user_menu_dark_mode_toggle">
+                                <input class="form-check-input w-30px h-20px" type="checkbox" value="1" name="mode" id="kt_user_menu_dark_mode_toggle" data-kt-url="dark/index.html" />
+                                <span class="pulse-ring ms-n1"></span>
+                                <span class="form-check-label text-gray-600 fs-7">Dark Mode</span>
+                            </label>
+                        </div>
+                    </div>
+                    <!--end::Menu item-->
+                </div>
+                <!--end::User account menu-->
+            </div>
+            <!--end::User menu-->
+        </div>
+        <!--end::User panel-->
+    </div>
+    <!--end::Footer-->
+
+
+
+</div>

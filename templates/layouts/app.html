@@ -34,7 +34,16 @@
 		
 		<div class="d-flex flex-column flex-root">
 			<div class="page d-flex flex-row flex-column-fluid">
-					{% include 'layouts/sidemenu.html' %}
+
+					{% if request.resolver_match.url_name in "shops.shop.index,shops.shop.product.index" %}
+						{% include 'layouts/shop-sidemenu.html' %}
+					{% else %}
+						{% include 'layouts/sidemenu.html' %}
+					{% endif %}
+					
+
+
+
 				<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
 					{% include 'layouts/header.html' %}
 					{% block content %}{% endblock content %}
