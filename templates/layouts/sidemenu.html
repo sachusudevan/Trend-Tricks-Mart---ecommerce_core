@@ -81,7 +81,7 @@
 
 
                 <div class="menu-item">
-                    <a class="menu-link {% if request.resolver_match.url_name in 'categories.index,categories.create,categories.update' %} active {% endif %}" href="{% url 'groups:groups.index' %}">
+                    <a class="menu-link {% if request.resolver_match.url_name in 'category.index,category.create,category.update' %} active {% endif %}" href="{% url 'categories:category.index' %}">
                         <span class="menu-icon">
                             <span class="svg-icon svg-icon-5">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512">

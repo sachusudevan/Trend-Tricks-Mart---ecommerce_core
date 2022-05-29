@@ -1,0 +1,303 @@
+{% extends 'layouts/app.html' %}
+{% load static %}
+
+
+{% block content %}
+
+	<!--begin::Content-->
+	<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+        <!--begin::Container-->
+        <div class="container-xxl" id="kt_content_container">
+            <!--begin::Form-->
+            <form id="ecommerce-category-form" class="form d-flex flex-column flex-lg-row"  method="POST" enctype="multipart/form-data"  action="{% url 'categories:category.create' %}">
+                {% csrf_token %}
+
+                <input type="hidden" name="category_id" value="{{category.id}}" />
+                <!--begin::Aside column-->
+                <div class="d-flex flex-column gap-7 gap-lg-10 w-100 w-lg-300px mb-7 me-lg-10">
+                    <!--begin::Logo settings-->
+                    <div class="card card-flush py-4">
+                        
+                        <div class="card-header">
+                            <!--begin::Card title-->
+                            <div class="card-title">
+                                <h2>Icon</h2>
+                            </div>
+                            <!--end::Card title-->
+                        </div>
+                        
+                        
+                        <div class="card-body text-center pt-0">
+                            <!--begin::Image input-->
+                            <div class="image-input image-input-empty image-input-outline mb-3" data-kt-image-input="true" {% if category.icon is not None %} style="background-image: url({{ category.icon.url }})" {% else %} style="background-image: url({% static 'assets/media/svg/files/blank-image.svg' %})" {% endif %}  >
+                                <!--begin::Preview existing category_icon-->
+                                <div class="image-input-wrapper w-150px h-150px"></div>
+                                <!--end::Preview existing category_icon-->
+                                
+                                <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change category image">
+                                    <i class="bi bi-pencil-fill fs-7"></i>
+                                    <!--begin::Inputs-->
+                                    <input type="file" name="category_icon" accept=".png, .jpg, .jpeg" />
+                                    <input type="hidden" name="category_icon_remove" />
+                                    <!--end::Inputs-->
+                                </label>
+                                
+                                <!--begin::Cancel-->
+                                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel category image">
+                                    <i class="bi bi-x fs-2"></i>
+                                </span>
+                                <!--end::Cancel-->
+                                <!--begin::Remove-->
+                                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
+                                    <i class="bi bi-x fs-2"></i>
+                                </span>
+                                <!--end::Remove-->
+                            </div>
+                            <!--end::Image input-->
+                            
+                            <div class="text-muted fs-7">Set the category icon. Only *.png, *.jpg and *.jpeg image files are accepted</div>
+                            
+                        </div>
+                        <!--end::Card body-->
+                    </div>
+                    <!--end::Logo settings-->
+
+
+
+                    <!--begin::Cover Image settings-->
+                    <div class="card card-flush py-4">
+                        
+                        <div class="card-header">
+                            <!--begin::Card title-->
+                            <div class="card-title">
+                                <h2>Image</h2>
+                            </div>
+                            <!--end::Card title-->
+                        </div>
+                        
+                        
+                        <div class="card-body text-center pt-0">
+                            <!--begin::Image input-->
+                            <div class="image-input image-input-empty image-input-outline mb-3" data-kt-image-input="true" {% if category.image is not None %} style="background-image: url({{ category.image.url }})" {% else %} style="background-image: url({% static 'assets/media/svg/files/blank-image.svg' %})" {% endif %} >
+                                <!--begin::Preview existing category_banner_image-->
+                                <div class="image-input-wrapper w-150px h-150px"></div>
+                                <!--end::Preview existing category_banner_image-->
+                                
+                                <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change Image">
+                                    <i class="bi bi-pencil-fill fs-7"></i>
+                                    <!--begin::Inputs-->
+                                    <input type="file" name="image" accept=".png, .jpg, .jpeg" />
+                                    <input type="hidden" name="image_remove" />
+                                    <!--end::Inputs-->
+                                </label>
+                                
+                                <!--begin::Cancel-->
+                                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel Image">
+                                    <i class="bi bi-x fs-2"></i>
+                                </span>
+                                <!--end::Cancel-->
+                                <!--begin::Remove-->
+                                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
+                                    <i class="bi bi-x fs-2"></i>
+                                </span>
+                                <!--end::Remove-->
+                            </div>
+                            <!--end::Image input-->
+                            
+                            <div class="text-muted fs-7">Set the Image. Only *.png, *.jpg and *.jpeg image files are accepted</div>
+                            
+                        </div>
+                        <!--end::Card body-->
+                    </div>
+                    <!--end::Cover Image settings-->
+                    <!--begin::Status-->
+                    <div class="card card-flush py-4">
+                        
+                        <div class="card-header">
+                            <!--begin::Card title-->
+                            <div class="card-title">
+                                <h2>Status</h2>
+                            </div>
+                            <!--end::Card title-->
+                            <!--begin::Card toolbar-->
+                            <div class="card-toolbar">
+                                <div class="rounded-circle {% if category.is_active == 1 %} bg-success  {% else %} bg-danger  {% endif %}  w-15px h-15px"></div>
+                            </div>
+                            <!--begin::Card toolbar-->
+                        </div>
+                        
+                        
+                        <div class="card-body pt-0">
+                            <!--begin::Select2-->
+                            <select class="form-select mb-2" name="category_status" data-control="select2" data-hide-search="true" data-placeholder="Select an option" id="kt_ecommerce_add_product_status_select">
+                                <option ></option>
+                                <option value="1" {% if category.is_active == 1 %} selected="selected" {% endif %}>Active</option>
+                                <option value="0" {% if category.is_active == 0 %} selected="selected" {% endif %}>In Active</option>
+                            </select>
+                            <!--end::Select2-->
+                            
+                            <div class="text-muted fs-7">Set the category status.</div>
+                            
+                           
+                        </div>
+                        <!--end::Card body-->
+                    </div>
+                    <!--end::Status-->
+          
+                   
+                </div>
+                <!--end::Aside column-->
+                <!--begin::Main column-->
+                <div class="d-flex flex-column flex-row-fluid gap-7 gap-lg-10">
+                    <!--begin:::Tabs-->
+                    <ul class="nav nav-custom nav-tabs nav-line-tabs nav-line-tabs-2x border-0 fs-4 fw-bold mb-n2">
+                        <!--begin:::Tab item-->
+                        <li class="nav-item">
+                            <a class="nav-link text-active-primary pb-4 active" data-bs-toggle="tab" href="#kt_ecommerce_add_category_general">General</a>
+                        </li>
+                        <!--end:::Tab item-->
+                  
+                    </ul>
+                    <!--end:::Tabs-->
+                    <!--begin::Tab content-->
+                    <div class="tab-content">
+                        <!--begin::Tab pane-->
+                        <div class="tab-pane fade show active" id="kt_ecommerce_add_category_general" role="tab-panel">
+                            <div class="d-flex flex-column gap-7 gap-lg-10">
+                                
+
+
+                                
+                                <div class="card card-flush py-4">
+                                    
+                                    <div class="card-header">
+                                        <div class="card-title">
+                                            <h2>General</h2>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="card-body pt-0 ">
+                                        <div class="mb-10 fv-row">
+                                            <label class="required form-label">Name</label>
+                                            <input type="text" name="category_name" value="{{category.name}}" class="form-control mb-2" placeholder="category name" value="" />
+                                            <div class="text-muted fs-7">A category name is required</div>
+                                        </div>
+                                        
+                                        <div >
+                                            <label class="form-label">Description</label>
+                                            <textarea hidden="true" id="category_description" name="category_description">{{category.description}}</textarea>
+                                            <div id="kt_ecommerce_add_category_description" name="category_description" class="min-h-200px mb-2">
+                                                {{category.description | safe}}
+                                            </div>
+                                            <div class="text-muted fs-7">Set a description to the category for better visibility.</div>
+                                        </div>
+
+
+                                        <div class="d-flex mb-10 flex-wrap gap-5 mt-10">
+                                            <div class="fv-row w-100 flex-md-root">
+                                                <label class="required form-label">Types </label>
+                                                <select class="form-select mb-2" name="group_type" data-control="select2" data-hide-search="false" data-placeholder="Select an option">
+                                                    <option></option>
+                                                    {% for type in types %}
+                                                        {% if category.type_id ==  type.id %}
+                                                            <option value="{{type.id}}" selected>{{type.name}}</option>
+                                                        {% else %}
+                                                            <option value="{{type.id}}">{{type.name}}</option>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                    
+                                                </select>
+                                                <div class="text-muted fs-7">Set the types name.</div>
+                                            </div>
+                                            <div class="fv-row w-100 flex-md-root">
+                                                <label class="form-label">Parent Category</label>
+                                                <select class="form-select mb-2" name="parent_category" data-control="select2" data-hide-search="false" data-placeholder="Select an option">
+                                                    <option></option>
+                                                    {% for parent_category in parent_categories %}
+                                                        {% if category.parent_category_id ==  parent_category.id %}
+                                                            <option value="{{parent_category.id}}" selected>{{parent_category.name}}</option>
+                                                        {% else %}
+                                                            <option value="{{parent_category.id}}">{{parent_category.name}}</option>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                    
+                                                </select>
+                                                <div class="text-muted fs-7">Set the parent category name.</div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    
+                                </div>
+                                
+                              
+                            
+                            </div>
+                        </div>
+
+
+                        <!--end::Tab pane-->
+                    </div>
+                    <!--end::Tab content-->
+                    <div class="d-flex justify-content-end">
+                        <!--begin::Button-->
+                        <a href="{% url 'categories:category.index' %}" id="kt_ecommerce_add_product_cancel" class="btn btn-light me-5">Cancel</a>
+                        <!--end::Button-->
+                        <!--begin::Button-->
+                        <button type="submit" id="ecommerce_add_category_submit" class="btn btn-primary">
+                            <span class="indicator-label">Save </span>
+                            <span class="indicator-progress">Please wait... 
+                            <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                        </button>
+                        <!--end::Button-->
+                    </div>
+                </div>
+                <!--end::Main column-->
+            </form>
+            <!--end::Form-->
+        </div>
+        <!--end::Container-->
+    </div>
+	<!--end::Content-->
+	
+{% endblock content %}
+
+
+
+{% block script %}
+    <script src="{% static 'assets/js/modules/catalog/save-category.js' %}?time={% now 'h:i:s' %}"></script>
+
+    <script>
+        $(document).ready(function(){
+            Inputmask({
+                mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
+                greedy: false,
+                onBeforePaste: function (pastedValue, opts) {
+                    pastedValue = pastedValue.toLowerCase();
+                    return pastedValue.replace("mailto:", "");
+                },
+                definitions: {
+                    "*": {
+                        validator: '[0-9A-Za-z!#$%&"*+/=?^_`{|}~\-]',
+                        cardinality: 1,
+                        casing: "lower"
+                    }
+                }
+            }).mask("#account_holder_email");
+            
+            new Tagify(document.querySelector("#meta_keywords"));
+            $('#account_number').maxlength({
+                warningClass: "badge badge-warning",
+                limitReachedClass: "badge badge-success"
+            });
+
+            Inputmask({
+                "mask" : "(999) 999-9999"
+            }).mask("#contact_number");
+
+
+              
+        });
+    </script>
+
+{% endblock script %}

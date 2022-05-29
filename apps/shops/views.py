@@ -116,9 +116,10 @@ class ShopsCreateOrUpdatetView(View):
         self.context['breadcrumbs'].append({"name" : self.context['action_title']+" Shops", "route" : '','active' : True});
 
     def post(self, request, *args, **kwargs):
+
+        shop_id = request.POST.get('shop_id', None)
         
         try:
-            shop_id = request.POST.get('shop_id', None)
             
             if shop_id:
                 self.action = 'Updated'
@@ -172,6 +173,8 @@ class ShopsCreateOrUpdatetView(View):
 
         except Exception as e:
             messages.error(request, f"Something went wrong.")
+            if shop_id is not None:
+                return redirect('shops:shops.update', id = shop_id )   
             return redirect('shops:shops.create')
 
         return redirect('shops:shops.index')

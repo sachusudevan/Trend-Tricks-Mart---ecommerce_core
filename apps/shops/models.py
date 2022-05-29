@@ -56,7 +56,7 @@ class Shops(models.Model):
 
 
     def save(self, *args, **kwargs):  # new
-        if not self.slug:
+        if not self.slug or self.name:
             self.slug = slugify(str(self.name))
         return super().save(*args, **kwargs)
 
