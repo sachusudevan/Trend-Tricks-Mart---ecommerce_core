@@ -8946,3 +8946,4 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'shops.shop.manufactur.destro
 2022-05-30 19:52:05,857 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\categories\models.py changed, reloading.
 2022-05-30 19:52:06,729 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2022-05-30 19:53:10,087 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-05-30 19:58:12,855 django.utils.autoreload INFO     Watching for file changes with StatReloader

@@ -15,7 +15,7 @@ var KTDatatablesServerSide = function() {
             responsive: true,
             processing: true,
             order: [
-                [0, 'desc']
+                [1, 'desc']
             ],
             select: {
                 style: 'multi',
