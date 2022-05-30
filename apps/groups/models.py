@@ -7,13 +7,13 @@ from apps.users.models import Users
 
 
 def groups_banner_image(self,filename):
-    return f"groups/banner/{self.name}-{random()}.png"
+    return f"groups/banner/{self.id}/{self.name}-{random()}.png"
 
 def groups_banner_default_image():
     return f"default/blank-image.svg"
 
 def groups_icon_image(self,filename):
-    return f"groups/icon/{self.name}-{random()}.png"
+    return f"groups/icon/{self.id}/{self.name}-{random()}.png"
 
 def groups_icon_default_image():
     return f"default/blank-image.svg"

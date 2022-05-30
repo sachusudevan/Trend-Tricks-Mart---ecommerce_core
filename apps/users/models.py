@@ -5,7 +5,7 @@ from django.utils.translation import gettext as _
 from multiselectfield import MultiSelectField
 
 def users_image(self, filename):
-    return f"users/{self.username}-{self.email}.png"
+    return f"users/{self.id}/{self.username}-{self.email}.png"
 
 def users_default_image():
     return f"default/default-avatar.jpg"

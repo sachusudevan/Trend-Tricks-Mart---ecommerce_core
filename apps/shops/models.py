@@ -6,13 +6,13 @@ from apps.users.models import Users
 from apps.locations.models import Country, State
 
 def shops_cover_image(self,filename):
-    return f"shops/cover/{self.name}-{random()}.png"
+    return f"shops/cover/{self.id}/{self.name}-{random()}.png"
 
 def shops_cover_default_image():
     return f"default/default-shop-image.jpg"
 
 def shops_logo_image(self,filename):
-    return f"shops/logo/{self.name}-{random()}.png"
+    return f"shops/logo/{self.id}/{self.name}-{random()}.png"
 
 def shops_logo_default_image():
     return f"default/default-shop-logo.png"

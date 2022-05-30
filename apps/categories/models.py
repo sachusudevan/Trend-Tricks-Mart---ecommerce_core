@@ -7,13 +7,13 @@ from apps.users.models import Users
 # Create your models here.
 
 def category_image(self,filename):
-    return f"category/banner/{self.name}-{random()}.png"
+    return f"category/banner/{self.id}/{self.name}-{random()}.png"
 
 def category_default_image():
     return f"default/blank-image.svg"
 
 def category_icon_image(self,filename):
-    return f"category/icon/{self.name}-{random()}.png"
+    return f"category/icon/{self.id}/{self.name}-{random()}.png"
 
 def category_icon_default_image():
     return f"default/blank-image.svg"
