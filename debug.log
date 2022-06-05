@@ -8947,3 +8947,661 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'shops.shop.manufactur.destro
 2022-05-30 19:52:06,729 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2022-05-30 19:53:10,087 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2022-05-30 19:58:12,855 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-05-31 10:07:33,114 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-05-31 10:07:53,833 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-05-31 10:08:25,077 django.request WARNING  Not Found: /assets/media/svg/illustrations/easy/2.svg
+2022-05-31 10:08:55,434 django.request WARNING  Not Found: /assets/media/svg/illustrations/easy/2.svg
+2022-05-31 10:09:04,365 django.request WARNING  Not Found: /assets/media/svg/illustrations/easy/2.svg
+2022-05-31 10:09:52,635 django.request WARNING  Not Found: /assets/media/svg/illustrations/easy/2.svg
+2022-05-31 10:13:05,407 django.request WARNING  Not Found: /favicon.ico
+2022-05-31 10:15:23,168 django.request WARNING  Not Found: /assets/media/svg/illustrations/easy/2.svg
+2022-05-31 11:10:07,474 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-05-31 11:10:15,451 django.request WARNING  Not Found: /assets/media/svg/illustrations/easy/2.svg
+2022-05-31 11:10:18,536 django.request WARNING  Not Found: /assets/media/svg/illustrations/easy/2.svg
+2022-06-04 10:39:44,136 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 10:39:57,589 django.request WARNING  Not Found: /assets/media/svg/illustrations/easy/2.svg
+2022-06-04 10:58:35,598 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-04 10:58:38,240 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:14:11,074 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:14:17,621 django.request WARNING  Not Found: /favicon.ico
+2022-06-04 11:17:11,641 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-04 11:17:13,259 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:17:47,845 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:17:48,920 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:18:20,922 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:18:22,162 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:18:46,494 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:18:47,503 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:19:06,983 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:19:59,461 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:20:00,531 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:21:15,782 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:21:16,729 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:21:32,119 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:21:32,982 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:21:43,394 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:21:44,320 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:22:00,707 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:22:01,778 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:22:02,483 django.request ERROR    Internal Server Error: /admin/product/manufactures/
+Traceback (most recent call last):
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\contrib\admin\utils.py", line 271, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\contrib\admin\utils.py", line 318, in _get_non_gfk_field
+    raise FieldIsAForeignKeyColumnName()
+django.contrib.admin.utils.FieldIsAForeignKeyColumnName
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\contrib\admin\templatetags\base.py", line 45, in render
+    return super().render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\library.py", line 260, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\contrib\admin\utils.py", line 280, in lookup_field
+    value = attr(obj)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py", line 19, in owner_id
+    return obj.username
+AttributeError: 'Manufactures' object has no attribute 'username'
+2022-06-04 11:22:09,825 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:22:10,875 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:22:31,337 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:22:32,311 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:22:58,161 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:22:59,195 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:29:52,729 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:29:54,238 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:29:56,953 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:29:58,122 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:31:24,242 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:31:25,162 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:31:29,857 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:31:30,689 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:31:38,551 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:31:39,361 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:32:11,675 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:32:12,921 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:32:30,308 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\locations\admin.py changed, reloading.
+2022-06-04 11:32:31,214 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:32:45,500 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\locations\admin.py changed, reloading.
+2022-06-04 11:32:46,391 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:32:48,057 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\locations\admin.py changed, reloading.
+2022-06-04 11:32:48,956 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:33:04,173 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\groups\admin.py changed, reloading.
+2022-06-04 11:33:05,087 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:33:11,946 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\locations\admin.py changed, reloading.
+2022-06-04 11:33:12,844 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:33:26,888 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\groups\admin.py changed, reloading.
+2022-06-04 11:33:27,675 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:33:30,394 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\groups\admin.py changed, reloading.
+2022-06-04 11:33:31,228 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:33:37,108 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\groups\admin.py changed, reloading.
+2022-06-04 11:33:37,979 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:33:43,847 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\locations\admin.py changed, reloading.
+2022-06-04 11:33:44,790 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:33:52,697 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\locations\admin.py changed, reloading.
+2022-06-04 11:33:53,616 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:33:58,312 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\locations\admin.py changed, reloading.
+2022-06-04 11:33:59,182 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:34:08,096 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:34:09,076 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:34:15,859 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:34:16,743 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:34:20,673 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:34:21,512 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:34:26,146 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:34:27,001 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:34:33,816 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:34:34,874 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:34:40,643 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:34:41,657 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:34:51,993 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:34:52,903 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:36:17,074 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:36:18,328 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:36:36,198 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:36:37,149 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:40:50,526 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-04 11:40:51,832 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-04 11:42:12,912 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-04 11:42:13,869 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:07:03,096 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:20:44,983 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:20:47,298 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:20:52,126 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:20:52,925 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:21:04,105 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 11:21:05,056 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:21:51,028 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:21:51,924 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:22:17,603 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:22:18,681 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:22:54,927 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:22:56,157 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:22:57,559 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:22:58,484 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:23:07,202 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:23:08,140 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:23:39,934 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:23:40,926 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:23:44,667 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:23:45,724 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:25:08,912 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:25:10,086 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:25:11,698 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:25:12,494 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:25:39,332 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:25:40,410 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:26:15,815 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:26:16,788 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:26:19,712 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:26:20,685 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:26:26,223 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:26:27,331 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:26:30,097 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:26:31,229 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:26:32,839 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:26:33,740 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:26:38,590 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:26:39,580 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:26:45,660 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:26:46,732 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:26:50,465 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:26:51,483 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:26:53,144 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:26:54,224 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:26:56,945 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:26:57,889 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:27:05,903 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:27:06,858 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:27:08,436 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:27:09,617 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:27:11,435 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:27:12,330 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:27:24,395 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:27:25,416 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:27:42,910 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:27:43,811 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 11:29:38,779 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 11:29:39,761 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:41:06,752 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:41:07,646 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:43:06,623 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:43:07,573 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:43:55,682 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:43:56,668 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:43:58,426 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:43:59,339 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:44:13,546 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:44:14,557 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:44:23,556 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:44:24,572 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:44:43,016 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:44:44,118 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:44:53,186 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:44:54,147 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:45:29,506 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:45:30,595 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:45:34,435 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:45:35,574 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:46:03,550 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:46:04,536 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:46:22,037 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:46:23,007 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:46:36,321 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:46:37,344 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:46:45,422 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:46:46,494 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:46:53,342 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:46:54,397 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:47:06,704 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:47:07,656 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:47:10,369 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:47:11,445 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:47:19,338 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:47:20,379 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:47:29,395 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:47:30,426 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:47:34,100 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:47:35,363 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:48:04,129 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:48:30,995 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:48:32,327 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:49:14,062 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:49:14,965 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:49:20,530 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:49:21,535 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:49:23,257 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:49:24,369 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:49:28,070 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:49:29,282 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:49:38,167 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:49:39,420 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:49:51,064 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:51:59,465 django.request WARNING  Not Found: /favicon.ico
+2022-06-05 12:52:05,413 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:52:06,898 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:53:21,139 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 12:53:22,255 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:55:03,994 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:55:23,514 django.request ERROR    Internal Server Error: /admin/product/metadata/
+Traceback (most recent call last):
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\contrib\admin\utils.py", line 271, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\contrib\admin\utils.py", line 318, in _get_non_gfk_field
+    raise FieldIsAForeignKeyColumnName()
+django.contrib.admin.utils.FieldIsAForeignKeyColumnName
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\contrib\admin\templatetags\base.py", line 45, in render
+    return super().render(context)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\template\library.py", line 260, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\contrib\admin\utils.py", line 280, in lookup_field
+    value = attr(obj)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py", line 60, in product_id
+    return obj.name
+AttributeError: 'Metadata' object has no attribute 'name'
+2022-06-05 12:55:44,933 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 12:55:46,111 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:55:55,275 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 12:55:56,227 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:56:06,657 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 12:56:07,521 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:56:15,750 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 12:56:16,644 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:56:26,642 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 12:56:27,503 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:56:45,337 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 12:56:46,340 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:56:50,144 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 12:56:51,075 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:56:52,667 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 12:56:53,646 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:58:26,178 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 12:58:27,032 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:58:36,133 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 12:58:37,138 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:59:38,720 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 12:59:39,638 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 12:59:59,279 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:00:30,782 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:00:31,691 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:03:18,068 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:03:19,014 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:03:43,365 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:03:44,495 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:04:22,975 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:04:24,211 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:04:36,732 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:04:37,939 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:04:47,016 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:04:48,052 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:04:55,993 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:04:56,859 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:05:07,110 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:05:07,972 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:05:17,769 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:05:18,926 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:05:46,603 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:05:47,750 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:06:13,633 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:06:14,632 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:06:22,553 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:06:23,507 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:06:33,502 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:06:34,438 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:06:49,486 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:06:50,398 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:06:54,099 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:06:55,068 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:07:02,934 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:07:03,852 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:07:17,964 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:07:18,945 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:07:20,588 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:07:21,477 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:07:26,252 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:07:27,242 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:09:45,555 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:09:46,934 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:10:06,676 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:10:07,844 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:10:19,347 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:10:20,514 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:10:28,751 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:10:29,733 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:11:52,543 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:11:53,435 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:12:12,286 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:12:13,202 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:12:20,142 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:12:21,041 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:12:26,376 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:12:27,326 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:13:42,161 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:13:43,012 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:13:48,737 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:13:49,689 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:13:52,486 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:13:53,359 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:13:59,297 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:14:00,406 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:14:03,263 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:14:04,166 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:14:21,851 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:14:23,109 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:15:03,918 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:15:04,874 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:15:39,395 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:15:40,274 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:15:49,199 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:15:50,114 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:15:57,070 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:15:57,983 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:16:01,532 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:16:02,455 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:16:06,081 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:16:07,261 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:16:49,849 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:16:50,803 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:17:28,033 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:17:29,203 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:17:44,549 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:17:45,559 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:17:47,156 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:17:47,986 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:18:07,431 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:18:08,418 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:18:17,789 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:18:18,797 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:18:36,174 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:18:37,264 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:18:43,237 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:18:44,147 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 13:18:46,802 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 13:18:53,623 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 14:14:21,671 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 14:14:47,345 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 14:15:26,779 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 14:15:57,830 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 14:16:18,037 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 14:18:06,457 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 14:18:26,256 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 14:20:11,599 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 14:21:27,194 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 14:23:18,685 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 14:23:54,593 django.request ERROR    Internal Server Error: /admin/product/products/
+Traceback (most recent call last):
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\contrib\admin\options.py", line 683, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\contrib\admin\options.py", line 1926, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\contrib\admin\options.py", line 831, in get_changelist_instance
+    return ChangeList(
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\contrib\admin\views\main.py", line 122, in __init__
+    self.queryset = self.get_queryset(request)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\contrib\admin\views\main.py", line 529, in get_queryset
+    qs, search_may_have_duplicates = self.model_admin.get_search_results(
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\contrib\admin\options.py", line 1147, in get_search_results
+    queryset = queryset.filter(or_queries)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\db\models\query.py", line 1071, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\db\models\query.py", line 1089, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\db\models\query.py", line 1096, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\db\models\sql\query.py", line 1502, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\db\models\sql\query.py", line 1532, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\db\models\sql\query.py", line 1358, in build_filter
+    return self._add_q(
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\db\models\sql\query.py", line 1532, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\db\models\sql\query.py", line 1448, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "E:\Projects\Django\ecommerce-django-react\ecommerce_core\venv\lib\site-packages\django\db\models\sql\query.py", line 1262, in build_lookup
+    raise FieldError(
+django.core.exceptions.FieldError: Related Field got invalid lookup: icontains
+2022-06-05 14:24:15,360 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 14:24:16,511 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 14:25:40,721 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 14:25:42,294 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 14:29:54,400 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 14:31:20,058 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 14:31:44,231 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 14:36:13,926 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 14:39:13,812 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 14:41:52,824 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 14:42:10,687 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 14:42:41,543 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 14:43:03,786 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 14:45:04,084 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 15:04:05,008 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 15:04:06,142 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 15:04:10,951 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 15:04:11,925 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 15:04:13,826 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 15:04:14,889 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 15:05:17,903 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 15:05:18,998 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 15:07:02,947 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 15:07:04,075 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 15:07:05,665 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 15:07:06,641 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 15:07:14,622 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 15:07:15,635 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 16:06:57,255 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 16:06:59,288 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 16:11:40,470 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 16:11:41,564 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 16:11:50,733 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 16:11:51,656 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 16:14:46,918 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 16:14:47,974 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 16:15:03,217 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 16:15:04,168 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 16:15:36,720 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 16:15:38,077 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 16:15:47,057 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 16:15:48,082 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 16:15:52,010 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 16:15:52,823 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 16:16:17,520 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 16:16:18,686 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 16:18:00,683 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 16:18:01,620 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 16:18:03,419 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 16:18:04,415 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 16:18:07,230 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 16:18:08,731 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 16:18:10,497 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 16:18:22,343 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 16:27:40,975 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\models.py changed, reloading.
+2022-06-05 16:27:42,404 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 16:27:51,426 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\apps\product\admin.py changed, reloading.
+2022-06-05 16:27:52,728 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 16:28:40,653 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 16:28:56,480 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 16:29:11,819 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 16:29:21,020 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 16:29:59,585 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 16:31:06,433 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 16:32:20,820 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 16:33:19,657 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 16:39:12,106 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 16:39:37,405 django.security.TooManyFieldsSent ERROR    The number of GET/POST parameters exceeded settings.DATA_UPLOAD_MAX_NUMBER_FIELDS.
+2022-06-05 16:39:37,771 django.request WARNING  Bad Request: /admin/product/products/
+2022-06-05 16:39:52,393 django.security.TooManyFieldsSent ERROR    The number of GET/POST parameters exceeded settings.DATA_UPLOAD_MAX_NUMBER_FIELDS.
+2022-06-05 16:39:52,432 django.request WARNING  Bad Request: /admin/product/products/
+2022-06-05 16:40:12,207 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\ecommerce_core\settings.py changed, reloading.
+2022-06-05 16:40:13,420 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 16:40:15,123 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\ecommerce_core\settings.py changed, reloading.
+2022-06-05 16:40:16,011 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 16:40:17,256 django.security.TooManyFieldsSent ERROR    The number of GET/POST parameters exceeded settings.DATA_UPLOAD_MAX_NUMBER_FIELDS.
+2022-06-05 16:40:17,318 django.request WARNING  Bad Request: /admin/product/products/
+2022-06-05 16:40:18,223 django.security.TooManyFieldsSent ERROR    The number of GET/POST parameters exceeded settings.DATA_UPLOAD_MAX_NUMBER_FIELDS.
+2022-06-05 16:40:18,276 django.request WARNING  Bad Request: /admin/product/products/
+2022-06-05 16:40:18,853 django.security.TooManyFieldsSent ERROR    The number of GET/POST parameters exceeded settings.DATA_UPLOAD_MAX_NUMBER_FIELDS.
+2022-06-05 16:40:18,893 django.request WARNING  Bad Request: /admin/product/products/
+2022-06-05 16:40:25,343 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 16:40:34,324 django.security.TooManyFieldsSent ERROR    The number of GET/POST parameters exceeded settings.DATA_UPLOAD_MAX_NUMBER_FIELDS.
+2022-06-05 16:40:34,370 django.request WARNING  Bad Request: /admin/product/products/
+2022-06-05 16:40:54,555 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\ecommerce_core\settings.py changed, reloading.
+2022-06-05 16:40:55,628 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 16:40:57,358 django.utils.autoreload INFO     E:\Projects\Django\ecommerce-django-react\ecommerce_core\ecommerce_core\settings.py changed, reloading.
+2022-06-05 16:40:58,265 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-06-05 16:42:18,929 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 16:51:21,418 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 16:53:04,164 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 17:03:16,533 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 17:04:06,366 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 17:04:55,115 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 17:05:32,565 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 17:06:45,078 faker.factory DEBUG    Not in REPL -> leaving logger event level as is.
+2022-06-05 18:53:45,245 django.utils.autoreload INFO     Watching for file changes with StatReloader
